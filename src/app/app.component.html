@@ -1,0 +1,67 @@
+<div class="app-container">
+    <nav class="navBar">
+        <span>Book Your Space</span>
+    </nav>
+    <div class="main">
+        <div class="cars">
+            <span>Total cars parked: {{BookingData.length}}</span>
+        </div>
+
+        <div class="parkingForm">
+            <div class="booking">
+                <form #inputBox="ngForm" (ngSubmit)="onSubmit(inputBox.value)">
+                    <div class="labelBox">
+                        <label>Book Your Parking Space</label>
+                    </div>
+                    <div class="Box">
+                        <input type="text" required name="name" ngModel>
+                        <span>Full Name</span>
+                    </div>
+                    <div class="Box">
+                        <input type="number" required name="contact" ngModel>
+                        <span>Contact</span>
+                    </div>
+                    <div class="Box">
+                        <input type="text" required name="vehicle" ngModel>
+                        <span>vehicle Number</span>
+                    </div>
+                    <div class="selectBox">
+                        <select name="options" ngModel required>
+                            <option value=""></option>
+                            <option value="Parking (P1)">Parking (P1)</option>
+                            <option value="Parking (P2)">Parking (P2)</option>
+                            <option value="Parking (P3)">Parking (P3)</option>
+                          </select>
+                          <span>Select parking</span>
+                    </div>
+                    <div class="submitBtn">
+                        <button class="btn" type="submit" [disabled]="!inputBox.valid">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>  
+    </div>
+    <div class="bookedSlots" *ngIf="BookingData.length>0">
+        <app-slots [BookingData]="BookingData"/>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div>
+            <iframe src="https://giphy.com/embed/WmuDSn2JRPlv8tZAoO" width="100px" height="100px" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        </div>
+        <p><a href="https://giphy.com/gifs/parking-airport-parkingo-WmuDSn2JRPlv8tZAoO"></a></p> -->

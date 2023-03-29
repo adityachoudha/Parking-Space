@@ -1,0 +1,12 @@
+<div class="bookingcards">
+    <h1>Booked Slots</h1>
+    <div class="slots">
+        <div class="card" *ngFor="let item of BookingData; let i=index">
+            <span>Receipt: {{i+1}} </span>
+            <span>Name: {{item.name}}</span>
+            <span>Contact: {{item.contact}}</span>
+            <span>Vehicel: {{item.vehicel}}</span>
+            <span>Parking: {{item.options}}</span>
+        </div>
+    </div>
+</div>

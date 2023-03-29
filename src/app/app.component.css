@@ -1,0 +1,153 @@
+.navBar {
+    background-color: #000;
+    color: #9890A5;
+    padding: 18px;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+.main {
+    background: url(./../assets/pp.jpg);
+    min-height: 88.2vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.cars {
+    background-color: #000;
+    color: red;
+    width: fit-content;
+    margin: 20px 2% 0px 65%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 13px;
+    border-radius: 8px;
+    text-align: center;
+    animation:  glow 1.2s ease-in-out infinite;
+}
+
+.parkingForm {
+    max-width: 280px;
+    margin-left: 10%;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+    border-radius: 10px;
+}
+.booking{
+    backdrop-filter: blur(10px);
+    padding: 5%;
+    border-radius: 10px;
+}
+.labelBox{
+    color:#fff;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 7px;
+}
+.Box {
+    display: flex;
+    flex-direction: column;
+    margin: 18px 18px;
+}
+.Box input{
+    border: 2px solid #ffaa00;
+    outline: none;
+    line-height: 2em;
+    font-size: 1.1em;
+    border-bottom-left-radius: 8px;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    max-width: 250px;
+    text-align: center;
+}
+.Box span, .selectBox span{
+    margin-left: 20px;
+    width: fit-content;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: monospace;
+    animation: 0.1s ease;
+    position: relative;
+    
+}
+
+.Box input:valid,
+.Box input:focus{
+    background-color: #fff;
+    border: 2px solid #ffaa00;
+    border-top-right-radius: 8px;
+}
+.Box input:valid~span,
+.Box input:focus~span{
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    transition: 0.5s;
+    transform: translate3d(30px, -60px, 0);
+}
+.selectBox {
+    display: flex;
+    flex-direction: column;
+    margin: 18px 18px 5px 18px;
+}
+.selectBox select{
+    border: 2px solid #ffaa00;
+    outline: none;
+    height: 2.5em;
+    font-size: 1.1em;
+    background: transparent;
+    border-bottom-left-radius: 8px;
+    border-top: none;
+    border-right: none;
+    text-align: center;
+}
+.selectBox select:valid,
+.selectBox select:focus{
+    background-color: #fff;
+    border: 2px solid #ffaa00;
+    border-top-right-radius: 8px;
+}
+.selectBox select:valid~span,
+.selectBox select:focus~span{
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    transition: 0.5s;
+    transform: translate3d(30px, -60px, 0);
+}
+.submitBtn{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    border: 2px solid #ffaa00;
+    font-size: 1.1em;
+    padding: 5px 10px 5px 10px;
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+}
+@media only screen and (max-width: 600px){
+    .main{
+        align-items: center;
+    }
+    .parkingForm{
+        margin-top: 2%;
+    }
+}
+@keyframes glow {
+    from {
+        text-shadow: 1px 1px 1px teal;
+    }
+}
